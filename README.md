@@ -17,13 +17,12 @@
 2. 子项目间的依赖可以直接引用本地包，实时更新，不需要重复安装依赖。
 3. TypeScript管理，前后端共用一份TypeScript类型，后端增加字段，前端同步更新，完美避开了丢失字段的问题。
 
-
-
 ### 初始化项目
 
 ```bash
 npm i pnpm -g
 ```
+
 对其版本号
 
 pnpm 10.26.1
@@ -39,9 +38,9 @@ nest 11.0.14
 
 ```yaml
 packages:
-  - 'app/*'
-  - 'server'
-  - 'packages/*'
+  - "app/*"
+  - "server"
+  - "packages/*"
 ```
 
 定义package.json name字段 使用@开头
@@ -53,14 +52,16 @@ npm init vue
 ```
 
 server执行,初始化nest项目
+
 ```json
 {
-  "webpack":true, //移除这一行代码
+  "webpack": true, //移除这一行代码
   "generateOptions": {
     "spec": false
   }
 }
 ```
+
 ```bash
 nest new server
 cd server
