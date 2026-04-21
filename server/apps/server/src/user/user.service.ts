@@ -16,7 +16,7 @@ export class UserService {
 
   async findAll() {
     const test = await this.prisma.user.findMany();
-    return this.responseservice.SUCCESS(test);
+    return this.responseservice.success(test);
   }
 
   findOne(id: number) {

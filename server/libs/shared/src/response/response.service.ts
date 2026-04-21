@@ -13,7 +13,7 @@ const BUSINESS = {
 
 @Injectable()
 export class ResponseService {
-  SUCCESS(data: unknown) {
+  success(data: unknown) {
     return {
       data,
       code: BUSINESS.SUCESS.code,
