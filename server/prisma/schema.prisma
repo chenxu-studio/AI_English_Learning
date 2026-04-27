@@ -24,10 +24,10 @@ enum TradeStatus {
 
 //用户表
 model User {
-  id String @id @default(cuid()) // 用户id
+  id String @id @default(cuid()) // 用户 id
   name String //用户名
-  email String @unique //邮箱(唯一的)
-  phone String? //手机
+  email String? @unique //邮箱 (唯一的，可选)
+  phone String? @unique//手机 (唯一的)
   address String? //地址
   password String// 密码
   avator String? //头像
@@ -37,7 +37,7 @@ model User {
   updateAt DateTime @default(now()) //更行时间
   lastLoginAt DateTime @updatedAt
   // 下面是三张子表
-  wordBookRecords WordBookRecord[] // 表示一个用户能学多个单词,下面的也是同样的一对多关系
+  wordBookRecords WordBookRecord[] // 表示一个用户能学多个单词，下面的也是同样的一对多关系
   paymentRecords PaymentRecord[]
   courseRecords CourseRecord[]
 }
